@@ -21,8 +21,6 @@ import javax.sql.DataSource;
   entityManagerFactoryRef = "countryEntityManagerFactory",
   transactionManagerRef = "countryTransactionManager",
   basePackages = { "com.multidb2.countrydb.repository" }
-
-
 )
 public class CountryDataSourceConfig {
 	@Bean(name="countryDataSource")
@@ -45,5 +43,4 @@ public class CountryDataSourceConfig {
 			@Qualifier("countryEntityManagerFactory") EntityManagerFactory userEntityManagerFactory) {
 		return new JpaTransactionManager(userEntityManagerFactory);
 	}
-
 }
