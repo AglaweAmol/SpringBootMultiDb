@@ -37,7 +37,7 @@ public class H2DataSourceConfig {
 
         return builder
                 .dataSource(dataSource)
-                .packages("com.multidb2.employeedb.entity")  // Adjust to your package
+                .packages("com.multidb2.entity.employeedb")  // Adjust to your package
                 .persistenceUnit("h2")
                 .properties(properties)
                 .build();

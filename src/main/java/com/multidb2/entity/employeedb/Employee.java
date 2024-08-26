@@ -1,6 +1,6 @@
-package com.multidb2.employeedb.entity;
+package com.multidb2.entity.employeedb;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity

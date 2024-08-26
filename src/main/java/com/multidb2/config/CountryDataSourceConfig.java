@@ -1,6 +1,6 @@
 package com.multidb2.config;
 
-import jakarta.persistence.EntityManagerFactory;
+import javax.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(
   entityManagerFactoryRef = "countryEntityManagerFactory",
   transactionManagerRef = "countryTransactionManager",
-  basePackages = { "com.multidb2.countrydb.repository" }
+  basePackages = { "com.multidb2.repository.countrydb" }
 )
 public class CountryDataSourceConfig {
 	@Bean(name="countryDataSource")
@@ -34,7 +34,7 @@ public class CountryDataSourceConfig {
 			@Qualifier("countryDataSource") DataSource userDataSource) {
 		return builder
 				.dataSource(userDataSource)
-				.packages("com.multidb2.countrydb.entity")
+				.packages("com.multidb2.entity.countrydb")
 				.build();
 	}
 	

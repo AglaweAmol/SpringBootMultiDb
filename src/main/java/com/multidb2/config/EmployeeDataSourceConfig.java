@@ -1,6 +1,6 @@
 package com.multidb2.config;
 
-import jakarta.persistence.EntityManagerFactory;
+import javax.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(
   entityManagerFactoryRef = "employeeEntityManagerFactory",
   transactionManagerRef = "employeeTransactionManager",
-  basePackages = { "com.multidb2.employeedb.repository" }
+  basePackages = { "com.multidb2.repository.employeedb" }
 )
 
 
@@ -40,7 +40,7 @@ public class EmployeeDataSourceConfig {
 			@Qualifier("employeeDataSource") DataSource accountDataSource) {
 		return builder
 				.dataSource(accountDataSource)
-				.packages("com.multidb2.employeedb.entity")
+				.packages("com.multidb2.entity.employeedb")
 				.build();
 	}
 

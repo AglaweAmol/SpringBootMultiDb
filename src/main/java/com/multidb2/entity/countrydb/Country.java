@@ -1,6 +1,6 @@
-package com.multidb2.countrydb.entity;
+package com.multidb2.entity.countrydb;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity

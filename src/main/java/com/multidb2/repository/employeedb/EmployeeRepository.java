@@ -1,6 +1,6 @@
-package com.multidb2.employeedb.repository;
+package com.multidb2.repository.employeedb;
 
-import com.multidb2.employeedb.entity.Employee;
+import com.multidb2.entity.employeedb.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
